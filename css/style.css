@@ -1,10 +1,15 @@
 @import "reset.css";
 @import "background.css";
 @import "status-bar.css";
+@import "greetings.css";
+@import "todo.css";
 
 body {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {

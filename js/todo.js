@@ -21,12 +21,15 @@ function deleteToDo(event) {
 // toDo에 관한 객체를 인자로 받아 화면에 형식에 맞게 출력한다
 function paintToDo(newToDo) {
   const li = document.createElement("li");
+  const bullet = document.createElement("i");
   const span = document.createElement("span");
-  const button = document.createElement("button");
+  const button = document.createElement("i");
   li.id = newToDo.id;
+  bullet.classList.add("fas", "fa-square");
   span.innerText = newToDo.text;
-  button.innerText = "❌";
+  button.classList.add("fas", "fa-times");
   button.addEventListener("click", deleteToDo);
+  li.appendChild(bullet);
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
