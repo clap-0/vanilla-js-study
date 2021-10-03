@@ -1,0 +1,14 @@
+.bg-image {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  object-fit: cover;
+}
+
+body :not(.bg-image) {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
