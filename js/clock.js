@@ -1,4 +1,4 @@
-const clock = document.querySelector("h2#clock");
+const clock = document.querySelector("#clock");
 
 // 현재 시각을 불러와서 출력한다
 function getClock() {

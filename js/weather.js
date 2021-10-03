@@ -6,10 +6,12 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const weather = document.querySelector("#weather span:first-child");
-      const city = document.querySelector("#weather span:last-child");
+      const weatherContainer = document.querySelector("#weather");
+      const weather = weatherContainer.querySelector("span:first-child");
+      const city = weatherContainer.querySelector("span:last-child");
+      weatherContainer.classList.remove("hidden");
       weather.innerText = data.name;
-      city.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+      city.innerText = `${data.weather[0].main} / ${data.main.temp}°C`;
     });
 }
 function onGeoError() {

@@ -8,7 +8,6 @@
 }
 
 body :not(.bg-image) {
-  position: relative;
   z-index: 2;
   color: white;
 }
